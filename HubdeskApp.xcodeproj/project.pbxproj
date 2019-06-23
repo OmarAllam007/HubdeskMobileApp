@@ -1,0 +1,406 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		077C8C6222B041C200B04F0B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077C8C6122B041C200B04F0B /* HomeViewController.swift */; };
+		077C8C6422B0420400B04F0B /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077C8C6322B0420400B04F0B /* TicketsViewController.swift */; };
+		077C8C6622B0422100B04F0B /* ApprovalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077C8C6522B0422100B04F0B /* ApprovalsViewController.swift */; };
+		077C8C6822B0455400B04F0B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077C8C6722B0455400B04F0B /* Colors.swift */; };
+		07C8F44822AEFCE400D69671 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C8F44722AEFCE400D69671 /* AppDelegate.swift */; };
+		07C8F45022AEFCE400D69671 /* HubdeskApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 07C8F44E22AEFCE400D69671 /* HubdeskApp.xcdatamodeld */; };
+		07C8F45222AEFCE600D69671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C8F45122AEFCE600D69671 /* Assets.xcassets */; };
+		07C8F45522AEFCE600D69671 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C8F45322AEFCE600D69671 /* LaunchScreen.storyboard */; };
+		07C8F46222AF027600D69671 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C8F46122AF027600D69671 /* LoginViewController.swift */; };
+		07DD24C122BEAF9100596841 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DD24C022BEAF9100596841 /* ProfileViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		077C8C6122B041C200B04F0B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		077C8C6322B0420400B04F0B /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
+		077C8C6522B0422100B04F0B /* ApprovalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovalsViewController.swift; sourceTree = "<group>"; };
+		077C8C6722B0455400B04F0B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		07C8F44422AEFCE400D69671 /* HubdeskApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HubdeskApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07C8F44722AEFCE400D69671 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		07C8F44F22AEFCE400D69671 /* HubdeskApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HubdeskApp.xcdatamodel; sourceTree = "<group>"; };
+		07C8F45122AEFCE600D69671 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07C8F45422AEFCE600D69671 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		07C8F45622AEFCE600D69671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07C8F46122AF027600D69671 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		07DD24C022BEAF9100596841 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07C8F44122AEFCE400D69671 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07C8F43B22AEFCE400D69671 = {
+			isa = PBXGroup;
+			children = (
+				07C8F44622AEFCE400D69671 /* HubdeskApp */,
+				07C8F44522AEFCE400D69671 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07C8F44522AEFCE400D69671 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07C8F44422AEFCE400D69671 /* HubdeskApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07C8F44622AEFCE400D69671 /* HubdeskApp */ = {
+			isa = PBXGroup;
+			children = (
+				07C8F46022AF025800D69671 /* Helpers */,
+				07C8F45F22AF025300D69671 /* Cell */,
+				07C8F45E22AF024D00D69671 /* View */,
+				07C8F45D22AF024300D69671 /* Model */,
+				07C8F45C22AF023900D69671 /* Controller */,
+				07C8F44722AEFCE400D69671 /* AppDelegate.swift */,
+				07C8F45122AEFCE600D69671 /* Assets.xcassets */,
+				07C8F45322AEFCE600D69671 /* LaunchScreen.storyboard */,
+				07C8F45622AEFCE600D69671 /* Info.plist */,
+				07C8F44E22AEFCE400D69671 /* HubdeskApp.xcdatamodeld */,
+			);
+			path = HubdeskApp;
+			sourceTree = "<group>";
+		};
+		07C8F45C22AF023900D69671 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				07C8F46122AF027600D69671 /* LoginViewController.swift */,
+				077C8C6122B041C200B04F0B /* HomeViewController.swift */,
+				077C8C6322B0420400B04F0B /* TicketsViewController.swift */,
+				077C8C6522B0422100B04F0B /* ApprovalsViewController.swift */,
+				07DD24C022BEAF9100596841 /* ProfileViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		07C8F45D22AF024300D69671 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		07C8F45E22AF024D00D69671 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		07C8F45F22AF025300D69671 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		07C8F46022AF025800D69671 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				077C8C6722B0455400B04F0B /* Colors.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07C8F44322AEFCE400D69671 /* HubdeskApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07C8F45922AEFCE600D69671 /* Build configuration list for PBXNativeTarget "HubdeskApp" */;
+			buildPhases = (
+				07C8F44022AEFCE400D69671 /* Sources */,
+				07C8F44122AEFCE400D69671 /* Frameworks */,
+				07C8F44222AEFCE400D69671 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HubdeskApp;
+			productName = HubdeskApp;
+			productReference = 07C8F44422AEFCE400D69671 /* HubdeskApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07C8F43C22AEFCE400D69671 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = garana;
+				TargetAttributes = {
+					07C8F44322AEFCE400D69671 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 07C8F43F22AEFCE400D69671 /* Build configuration list for PBXProject "HubdeskApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07C8F43B22AEFCE400D69671;
+			productRefGroup = 07C8F44522AEFCE400D69671 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07C8F44322AEFCE400D69671 /* HubdeskApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07C8F44222AEFCE400D69671 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07C8F45522AEFCE600D69671 /* LaunchScreen.storyboard in Resources */,
+				07C8F45222AEFCE600D69671 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07C8F44022AEFCE400D69671 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07C8F46222AF027600D69671 /* LoginViewController.swift in Sources */,
+				077C8C6422B0420400B04F0B /* TicketsViewController.swift in Sources */,
+				07C8F45022AEFCE400D69671 /* HubdeskApp.xcdatamodeld in Sources */,
+				077C8C6822B0455400B04F0B /* Colors.swift in Sources */,
+				07C8F44822AEFCE400D69671 /* AppDelegate.swift in Sources */,
+				077C8C6622B0422100B04F0B /* ApprovalsViewController.swift in Sources */,
+				07DD24C122BEAF9100596841 /* ProfileViewController.swift in Sources */,
+				077C8C6222B041C200B04F0B /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		07C8F45322AEFCE600D69671 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07C8F45422AEFCE600D69671 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07C8F45722AEFCE600D69671 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		07C8F45822AEFCE600D69671 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07C8F45A22AEFCE600D69671 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D2G7297JH8;
+				INFOPLIST_FILE = HubdeskApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.garana.HubdeskApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		07C8F45B22AEFCE600D69671 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D2G7297JH8;
+				INFOPLIST_FILE = HubdeskApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.garana.HubdeskApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07C8F43F22AEFCE400D69671 /* Build configuration list for PBXProject "HubdeskApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07C8F45722AEFCE600D69671 /* Debug */,
+				07C8F45822AEFCE600D69671 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07C8F45922AEFCE600D69671 /* Build configuration list for PBXNativeTarget "HubdeskApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07C8F45A22AEFCE600D69671 /* Debug */,
+				07C8F45B22AEFCE600D69671 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		07C8F44E22AEFCE400D69671 /* HubdeskApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				07C8F44F22AEFCE400D69671 /* HubdeskApp.xcdatamodel */,
+			);
+			currentVersion = 07C8F44F22AEFCE400D69671 /* HubdeskApp.xcdatamodel */;
+			path = HubdeskApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 07C8F43C22AEFCE400D69671 /* Project object */;
+}
