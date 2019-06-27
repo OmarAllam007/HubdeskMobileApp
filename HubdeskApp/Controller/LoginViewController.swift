@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginViewController: UIViewController {
 
@@ -38,7 +39,7 @@ class LoginViewController: UIViewController {
         return btn
     }()
     
-    let customerIdTextField : UITextField = {
+    let employeeIdTextField : UITextField = {
         let v = UITextField()
         v.placeholder = "Employee ID"
         v.translatesAutoresizingMaskIntoConstraints = false
@@ -103,9 +104,9 @@ class LoginViewController: UIViewController {
         self.view.addSubview(loginContainer)
         
         //MARK:- login-constraints
-        loginContainer.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        loginContainer.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-        loginContainer.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -30).isActive = true
+        loginContainer.centerXAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerXAnchor).isActive = true
+        loginContainer.centerYAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerYAnchor).isActive = true
+        loginContainer.widthAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.widthAnchor, constant: -30).isActive = true
         loginContainer.heightAnchor.constraint(equalToConstant: 80).isActive = true
         
     }
@@ -121,24 +122,24 @@ class LoginViewController: UIViewController {
         loginButton.widthAnchor.constraint(equalTo: loginContainer.widthAnchor).isActive = true
         loginButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
-//        loginButton.addTarget(self, action: #selector(loginToApp), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(loginToApp), for: .touchUpInside)
     }
     
     func setupInputs(){
         
-        loginContainer.addSubview(customerIdTextField)
+        loginContainer.addSubview(employeeIdTextField)
         loginContainer.addSubview(lineSeparator)
         loginButton.addSubview(passwordTextField)
         //x, y , width, height
         
-        customerIdTextField.leftAnchor.constraint(equalTo: loginContainer.leftAnchor, constant:10).isActive = true
-        customerIdTextField.topAnchor.constraint(equalTo: loginContainer.topAnchor).isActive = true
-        customerIdTextField.widthAnchor.constraint(equalTo: loginContainer.widthAnchor).isActive = true
-        customerIdTextField.heightAnchor.constraint(equalTo: loginContainer.heightAnchor, multiplier: 1/2).isActive = true
+        employeeIdTextField.leftAnchor.constraint(equalTo: loginContainer.leftAnchor, constant:10).isActive = true
+        employeeIdTextField.topAnchor.constraint(equalTo: loginContainer.topAnchor).isActive = true
+        employeeIdTextField.widthAnchor.constraint(equalTo: loginContainer.widthAnchor).isActive = true
+        employeeIdTextField.heightAnchor.constraint(equalTo: loginContainer.heightAnchor, multiplier: 1/2).isActive = true
         
         
         lineSeparator.leftAnchor.constraint(equalTo: loginContainer.leftAnchor).isActive = true
-        lineSeparator.topAnchor.constraint(equalTo: customerIdTextField.bottomAnchor).isActive = true
+        lineSeparator.topAnchor.constraint(equalTo: employeeIdTextField.bottomAnchor).isActive = true
         lineSeparator.widthAnchor.constraint(equalTo: loginContainer.widthAnchor).isActive = true
         lineSeparator.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
@@ -155,6 +156,35 @@ class LoginViewController: UIViewController {
         mainViewLabel.bottomAnchor.constraint(equalTo: loginContainer.topAnchor, constant: -30).isActive = true
         mainViewLabel.widthAnchor.constraint(equalToConstant: 200).isActive = true
         mainViewLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
+    }
+    
+    @objc func loginToApp(){
+        
+        let employee_id = employeeIdTextField.text
+        let password = passwordTextField.text
+        
+        if (employee_id?.isEmpty)! || (password?.isEmpty)! {
+            self.present(displayErrorAlert(message: "All fields are required", title: "Error"), animated: true, completion: nil)
+            
+        }else{
+            
+            Alamofire.request(url(path: "user/login"), method:.post, parameters: ["employee_id":employee_id!, "password": password!] , headers: nil).responseJSON { (response) in
+                
+                if response.response?.statusCode == 401 {
+                    self.present(displayErrorAlert(message: "Your Employee ID or password is wrong ", title: "Authentication Error"), animated: true, completion: nil)
+                }
+                
+                if response.response?.statusCode == 200 {
+                    if let token = response.result.value as? String {
+                        UserDefaults.standard.setValue(token, forKey: "_token")
+                        self.present(HomeViewController(), animated: true, completion: nil)
+                    }
+                }
+            
+            }
+            
+        }
+        
     }
 
 }
