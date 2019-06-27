@@ -51,12 +51,13 @@ class TicketsViewController: UIViewController {
     
     func getOpenTickets(){
         if let _token = UserDefaults.standard.string(forKey: "_token") {
+
             Alamofire.request(url(path:"user/user_tickets"), method: .get ,parameters: nil , headers:["Authorization":"Bearer " + _token]).responseJSON { (response) in
 //            dump(String(data:response.data!, encoding: String.Encoding.utf8))
                 do{
                     let tickets = try JSONDecoder().decode([Ticket].self, from: response.data!)
                     self.tickets = tickets
-                    
+
                     self.ticketsTableView.reloadData()
                 }
                 catch(let error){
@@ -113,4 +114,5 @@ extension TicketsViewController : UITableViewDataSource , UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
     }
+    
 }

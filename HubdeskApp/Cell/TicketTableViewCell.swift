@@ -57,7 +57,7 @@ class TicketTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-    
+        backgroundColor = .lightGray
     }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -119,4 +119,21 @@ class TicketTableViewCell: UITableViewCell {
         
     }
 
+
+        
+    
+}
+
+class cell: TicketTableViewCell {
+    override var frame: CGRect {
+        get {
+            return super.frame
+        }
+        set (newFrame) {
+            var frame =  newFrame
+            frame.origin.y += 4
+            frame.size.height -= 2 * 5
+            super.frame = frame
+        }
+    }
 }

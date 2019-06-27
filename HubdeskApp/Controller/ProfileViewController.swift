@@ -7,23 +7,32 @@
 //
 
 import UIKit
+import Alamofire
 
 class ProfileViewController: UIViewController {
 
+    var user:User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Profile"
+        
+        getUserInfo()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func getUserInfo(){
+        if let _token = UserDefaults.standard.string(forKey: "_token") {
+            Alamofire.request(url(path:"user/user_profile"), method: .get ,parameters: nil , headers:["Authorization":"Bearer " + _token]).responseJSON { (response) in
+                do{
+                    let user = try JSONDecoder().decode(User.self, from: response.data!)
+                    self.user = user
+                }
+                catch(let error){
+                    print(error)
+                }
+                
+            }
+        }
     }
-    */
 
 }

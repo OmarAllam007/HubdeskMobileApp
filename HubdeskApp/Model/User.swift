@@ -32,6 +32,16 @@ struct User : Codable{
     let job: String?
     let employee_id: String?
     let extra_fields: ExtraFields?
+    let business_unit:BusinssUnit?
+    let department:Department?
+}
+
+struct BusinssUnit : Codable {
+    let name:String
+}
+
+struct Department : Codable {
+    let name:String
 }
 
 struct ExtraFields : Codable{
