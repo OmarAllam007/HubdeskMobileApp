@@ -30,7 +30,7 @@ class HomeViewController: UITabBarController {
         
         
         viewControllers = [ticketViewController,approvalsViewController,profileViewController]
-
+        self.selectedIndex = 0
     }
 
 }

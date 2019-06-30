@@ -22,6 +22,9 @@
 		07C8F45222AEFCE600D69671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C8F45122AEFCE600D69671 /* Assets.xcassets */; };
 		07C8F45522AEFCE600D69671 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C8F45322AEFCE600D69671 /* LaunchScreen.storyboard */; };
 		07C8F46222AF027600D69671 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C8F46122AF027600D69671 /* LoginViewController.swift */; };
+		07D0CC4C22C752F2003CD057 /* ProfileViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D0CC4B22C752F2003CD057 /* ProfileViewController+extension.swift */; };
+		07D0CC4F22C75920003CD057 /* TicketsViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D0CC4E22C75920003CD057 /* TicketsViewController+extension.swift */; };
+		07D0CC5122C77EA4003CD057 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D0CC5022C77EA4003CD057 /* Date.swift */; };
 		07DD24C122BEAF9100596841 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DD24C022BEAF9100596841 /* ProfileViewController.swift */; };
 		0838621EE0AEC057CBF55164 /* Pods_HubdeskApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2385EB208AA40590AA6CFB3 /* Pods_HubdeskApp.framework */; };
 		95F0334D22C48AC500038D8B /* Approval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F0334C22C48AC500038D8B /* Approval.swift */; };
@@ -45,6 +48,9 @@
 		07C8F45422AEFCE600D69671 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07C8F45622AEFCE600D69671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07C8F46122AF027600D69671 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		07D0CC4B22C752F2003CD057 /* ProfileViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController+extension.swift"; sourceTree = "<group>"; };
+		07D0CC4E22C75920003CD057 /* TicketsViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TicketsViewController+extension.swift"; sourceTree = "<group>"; };
+		07D0CC5022C77EA4003CD057 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		07DD24C022BEAF9100596841 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7327124A6BD0F9EC8EA0AE85 /* Pods-HubdeskApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HubdeskApp.release.xcconfig"; path = "Target Support Files/Pods-HubdeskApp/Pods-HubdeskApp.release.xcconfig"; sourceTree = "<group>"; };
 		95F0334C22C48AC500038D8B /* Approval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Approval.swift; sourceTree = "<group>"; };
@@ -85,6 +91,7 @@
 		07C8F44622AEFCE400D69671 /* HubdeskApp */ = {
 			isa = PBXGroup;
 			children = (
+				07D0CC4D22C75304003CD057 /* Extensions */,
 				07C8F46022AF025800D69671 /* Helpers */,
 				07C8F45F22AF025300D69671 /* Cell */,
 				07C8F45E22AF024D00D69671 /* View */,
@@ -143,8 +150,18 @@
 				077C8C6722B0455400B04F0B /* Colors.swift */,
 				07245F8D22C27C0600B2524D /* URL.swift */,
 				07245F8F22C27C2100B2524D /* Alert.swift */,
+				07D0CC5022C77EA4003CD057 /* Date.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		07D0CC4D22C75304003CD057 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				07D0CC4B22C752F2003CD057 /* ProfileViewController+extension.swift */,
+				07D0CC4E22C75920003CD057 /* TicketsViewController+extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		69BEB71A96825EE421360A93 /* Frameworks */ = {
@@ -290,10 +307,13 @@
 				95F0334D22C48AC500038D8B /* Approval.swift in Sources */,
 				07C8F45022AEFCE400D69671 /* HubdeskApp.xcdatamodeld in Sources */,
 				077C8C6822B0455400B04F0B /* Colors.swift in Sources */,
+				07D0CC5122C77EA4003CD057 /* Date.swift in Sources */,
 				07245F9622C2947900B2524D /* Ticket.swift in Sources */,
+				07D0CC4C22C752F2003CD057 /* ProfileViewController+extension.swift in Sources */,
 				07C8F44822AEFCE400D69671 /* AppDelegate.swift in Sources */,
 				077C8C6622B0422100B04F0B /* ApprovalsViewController.swift in Sources */,
 				07DD24C122BEAF9100596841 /* ProfileViewController.swift in Sources */,
+				07D0CC4F22C75920003CD057 /* TicketsViewController+extension.swift in Sources */,
 				076D986022C3FAC3002CC0F3 /* ApprovalTableViewCell.swift in Sources */,
 				07245F9022C27C2100B2524D /* Alert.swift in Sources */,
 				077C8C6222B041C200B04F0B /* HomeViewController.swift in Sources */,

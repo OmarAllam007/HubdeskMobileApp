@@ -12,6 +12,12 @@ class TicketTableViewCell: UITableViewCell {
 
     var ticket: Ticket!
     
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//
+//        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
+//    }
+    
     let ticketID: UILabel = {
         let v = UILabel()
         v.translatesAutoresizingMaskIntoConstraints = false
@@ -57,11 +63,12 @@ class TicketTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .lightGray
+
     }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        backgroundColor = .lightGray
         setupCellView()
     }
     
@@ -122,18 +129,4 @@ class TicketTableViewCell: UITableViewCell {
 
         
     
-}
-
-class cell: TicketTableViewCell {
-    override var frame: CGRect {
-        get {
-            return super.frame
-        }
-        set (newFrame) {
-            var frame =  newFrame
-            frame.origin.y += 4
-            frame.size.height -= 2 * 5
-            super.frame = frame
-        }
-    }
 }

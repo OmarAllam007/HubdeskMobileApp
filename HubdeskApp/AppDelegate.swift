@@ -23,9 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }else{
             window?.rootViewController = LoginViewController()
         }
-        
-        
-        
+
         window?.makeKeyAndVisible()
         return true
     }
