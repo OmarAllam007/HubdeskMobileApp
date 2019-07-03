@@ -42,12 +42,54 @@ struct Ticket : Codable{
     let requester:User?
     let technician:User?
     let status: Status?
+    let category:Category?
+    let subcategory:Subcategory?
+    let item: Item?
     let approvals:[Approval]?
     let replies:[Reply]?
     let attachments:[Attachment]?
     let log:[TicketLog]?
 }
 
+struct Item : Codable{
+    let id:Int
+    let subcategory_id:Int
+    let name:String
+    let description:String?
+    let deleted_at:String?
+    let created_at:String
+    let updated_at:String?
+    let service_request:Int?
+    let service_cost:Double?
+    let notes:String?
+}
+
+struct Subcategory: Codable {
+    let id:Int
+    let category_id:Int
+    let name:String
+    let description:String?
+    let deleted_at:String?
+    let created_at:String
+    let updated_at:String?
+    let service_request:Int?
+    let service_cost:Double?
+    let notes:String?
+}
+
+struct Category : Codable{
+    let id:Int
+    let name:String
+    let description:String?
+    let deleted_at:String?
+    let created_at:String
+    let updated_at:String?
+    let service_request:Int?
+    let type:Int?
+    let business_unit_id:Int?
+    let service_cost:Double?
+    let notes:String?
+}
 struct TicketLog:Codable {
     
 }
