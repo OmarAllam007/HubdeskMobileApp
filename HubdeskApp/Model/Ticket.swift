@@ -42,9 +42,22 @@ struct Ticket : Codable{
     let requester:User?
     let technician:User?
     let status: Status?
+    let approvals:[Approval]?
+    let replies:[Reply]?
+    let attachments:[Attachment]?
+    let log:[TicketLog]?
 }
 
+struct TicketLog:Codable {
+    
+}
 
+struct Attachment: Codable {
+    
+}
+struct Reply : Codable{
+    
+}
 
 struct Status : Codable{
     let id:Int?

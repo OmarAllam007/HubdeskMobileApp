@@ -112,8 +112,8 @@ extension TicketsViewController : UITableViewDataSource , UITableViewDelegate {
 extension TicketsViewController : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text != ""  {
-            filteredtickets = filteredtickets.filter { (Ticket) -> Bool in
-                return String(Ticket.id) == searchText
+            filteredtickets = tickets.filter { (Ticket) -> Bool in
+                return String(Ticket.id).contains(searchText)
             }
             
         }else{
@@ -121,7 +121,7 @@ extension TicketsViewController : UISearchBarDelegate {
         }
         
         self.ticketsTableView.reloadData()
-        filteredtickets = tickets
+//        filteredtickets = tickets
         
     }
 }

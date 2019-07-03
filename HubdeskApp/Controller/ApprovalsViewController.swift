@@ -125,6 +125,13 @@ extension ApprovalsViewController : UITableViewDataSource , UITableViewDelegate 
         return filteredApprovals.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let approvalController = ApprovalViewController()
+        approvalController.approval = approvals[indexPath.row]
+        
+        self.navigationController?.pushViewController(approvalController, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ِApprovalCell", for: indexPath) as! ApprovalTableViewCell
         let approval = filteredApprovals[indexPath.row]

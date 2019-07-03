@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070DF51122CA88DA00421A3B /* ApprovalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070DF51022CA88DA00421A3B /* ApprovalViewController.swift */; };
 		07245F8E22C27C0600B2524D /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07245F8D22C27C0600B2524D /* URL.swift */; };
 		07245F9022C27C2100B2524D /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07245F8F22C27C2100B2524D /* Alert.swift */; };
 		07245F9222C2871400B2524D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07245F9122C2871400B2524D /* User.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		070DF51022CA88DA00421A3B /* ApprovalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovalViewController.swift; sourceTree = "<group>"; };
 		07245F8D22C27C0600B2524D /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		07245F8F22C27C2100B2524D /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		07245F9122C2871400B2524D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				077C8C6322B0420400B04F0B /* TicketsViewController.swift */,
 				077C8C6522B0422100B04F0B /* ApprovalsViewController.swift */,
 				07DD24C022BEAF9100596841 /* ProfileViewController.swift */,
+				070DF51022CA88DA00421A3B /* ApprovalViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				07C8F45022AEFCE400D69671 /* HubdeskApp.xcdatamodeld in Sources */,
 				077C8C6822B0455400B04F0B /* Colors.swift in Sources */,
 				07D0CC5122C77EA4003CD057 /* Date.swift in Sources */,
+				070DF51122CA88DA00421A3B /* ApprovalViewController.swift in Sources */,
 				07245F9622C2947900B2524D /* Ticket.swift in Sources */,
 				07D0CC4C22C752F2003CD057 /* ProfileViewController+extension.swift in Sources */,
 				07C8F44822AEFCE400D69671 /* AppDelegate.swift in Sources */,
