@@ -8,15 +8,15 @@
 
 import Foundation
 
-func dateFromString(stringDate:String) -> String {
-    if stringDate != nil {
+func dateFromString(stringDate:String?) -> String {
+    if let str = stringDate {
         let dateDateFormatter = DateFormatter()
         dateDateFormatter.timeZone = TimeZone(abbreviation: "UTC")
         dateDateFormatter.calendar = Calendar(identifier: .gregorian)
         dateDateFormatter.locale = Locale(identifier: "en-GB")
         dateDateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
         
-        let date = dateDateFormatter.date(from: stringDate)
+        let date = dateDateFormatter.date(from: str)
         dateDateFormatter.dateFormat = "yyyy-MM-dd hh:mm"
         
         let strDate = dateDateFormatter.string(from: date!)

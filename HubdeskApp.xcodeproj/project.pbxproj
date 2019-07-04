@@ -27,6 +27,8 @@
 		07D0CC4F22C75920003CD057 /* TicketsViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D0CC4E22C75920003CD057 /* TicketsViewController+extension.swift */; };
 		07D0CC5122C77EA4003CD057 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D0CC5022C77EA4003CD057 /* Date.swift */; };
 		07DD24C122BEAF9100596841 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DD24C022BEAF9100596841 /* ProfileViewController.swift */; };
+		07EEEE4522CD29D900264DB2 /* ApprovalViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EEEE4422CD29D900264DB2 /* ApprovalViewController+extension.swift */; };
+		07EEEE4722CD2A8F00264DB2 /* ApprovalCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EEEE4622CD2A8F00264DB2 /* ApprovalCustomCell.swift */; };
 		0838621EE0AEC057CBF55164 /* Pods_HubdeskApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2385EB208AA40590AA6CFB3 /* Pods_HubdeskApp.framework */; };
 		95F0334D22C48AC500038D8B /* Approval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F0334C22C48AC500038D8B /* Approval.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 		07D0CC4E22C75920003CD057 /* TicketsViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TicketsViewController+extension.swift"; sourceTree = "<group>"; };
 		07D0CC5022C77EA4003CD057 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		07DD24C022BEAF9100596841 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		07EEEE4422CD29D900264DB2 /* ApprovalViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApprovalViewController+extension.swift"; sourceTree = "<group>"; };
+		07EEEE4622CD2A8F00264DB2 /* ApprovalCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovalCustomCell.swift; sourceTree = "<group>"; };
 		7327124A6BD0F9EC8EA0AE85 /* Pods-HubdeskApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HubdeskApp.release.xcconfig"; path = "Target Support Files/Pods-HubdeskApp/Pods-HubdeskApp.release.xcconfig"; sourceTree = "<group>"; };
 		95F0334C22C48AC500038D8B /* Approval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Approval.swift; sourceTree = "<group>"; };
 		A27AEA14AFD13CEAC428310A /* Pods-HubdeskApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HubdeskApp.debug.xcconfig"; path = "Target Support Files/Pods-HubdeskApp/Pods-HubdeskApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 			children = (
 				07245F9322C2943B00B2524D /* TicketTableViewCell.swift */,
 				076D985F22C3FAC3002CC0F3 /* ApprovalTableViewCell.swift */,
+				07EEEE4622CD2A8F00264DB2 /* ApprovalCustomCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 			children = (
 				07D0CC4B22C752F2003CD057 /* ProfileViewController+extension.swift */,
 				07D0CC4E22C75920003CD057 /* TicketsViewController+extension.swift */,
+				07EEEE4422CD29D900264DB2 /* ApprovalViewController+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -303,11 +309,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07EEEE4722CD2A8F00264DB2 /* ApprovalCustomCell.swift in Sources */,
 				07C8F46222AF027600D69671 /* LoginViewController.swift in Sources */,
 				077C8C6422B0420400B04F0B /* TicketsViewController.swift in Sources */,
 				07245F8E22C27C0600B2524D /* URL.swift in Sources */,
 				07245F9422C2943B00B2524D /* TicketTableViewCell.swift in Sources */,
 				95F0334D22C48AC500038D8B /* Approval.swift in Sources */,
+				07EEEE4522CD29D900264DB2 /* ApprovalViewController+extension.swift in Sources */,
 				07C8F45022AEFCE400D69671 /* HubdeskApp.xcdatamodeld in Sources */,
 				077C8C6822B0455400B04F0B /* Colors.swift in Sources */,
 				07D0CC5122C77EA4003CD057 /* Date.swift in Sources */,
