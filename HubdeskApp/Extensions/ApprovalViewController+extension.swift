@@ -7,9 +7,9 @@
 //
 
 import UIKit
+import Alamofire
 
-
-//MARK: UITABLE VIEW
+//MARK: UITABLE VIEW =====================
 extension ApprovalViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
@@ -23,32 +23,42 @@ extension ApprovalViewController : UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50.0
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 40.0
     }
+
     
 }
 
-//MARK: UICOLLECTION VIEW
-extension ApprovalViewController:UICollectionViewDelegate, UICollectionViewDataSource {
+//MARK: UICOLLECTION VIEW =====================
+extension ApprovalViewController:UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        requesterDetailsCollectionView.collectionViewLayout.invalidateLayout()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RequesterDetailsCell", for: indexPath) as! RequesterCollectionCell
+        cell.cellTitleLabel.text = requesterLabels[indexPath.row]
+        cell.cellDescriptionLabel.text = requesterValues[indexPath.row]
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+         return CGSize(width: collectionView.bounds.size.width, height: CGFloat(40))
+    }
     
 }
 
-class RequesterCollectionCell: UICollectionViewCell {
-    
-}
 
 
-//MARK: Display Views
+
+//MARK: Display Views =====================
 extension ApprovalViewController {
     func setupScrollableView(){
         view.addSubview(scrollableMainView)
@@ -66,7 +76,7 @@ extension ApprovalViewController {
             mainView.topAnchor.constraint(equalTo: scrollableMainView.topAnchor),
             mainView.bottomAnchor.constraint(equalTo: scrollableMainView.bottomAnchor),
             mainView.widthAnchor.constraint(equalTo: scrollableMainView.widthAnchor),
-            mainView.heightAnchor.constraint(equalTo: scrollableMainView.heightAnchor)
+            mainView.heightAnchor.constraint(equalTo: scrollableMainView.heightAnchor, multiplier: 1.3)
             ])
     }
     
@@ -111,6 +121,11 @@ extension ApprovalViewController {
     }
     
     func setupRequestDetails(){
+        requestDetailsTableView.register(ApprovalCustomCell.self, forCellReuseIdentifier: "RequestDetailsCell")
+        requestDetailsTableView.delegate = self
+        requestDetailsTableView.dataSource = self
+        requestDetailsTableView.separatorStyle = .none
+        
         mainView.addSubview(requestDescriptionLabel)
         
         NSLayoutConstraint.activate([
@@ -123,26 +138,36 @@ extension ApprovalViewController {
             requestDetailsTableView.topAnchor.constraint(equalTo: requestDescriptionLabel.bottomAnchor, constant: 5),
             requestDetailsTableView.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
             requestDetailsTableView.widthAnchor.constraint(equalTo: view.widthAnchor , constant: -15),
-            requestDetailsTableView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.20)
+            requestDetailsTableView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.40)
             ])
         
         
     }
     
     func setupRequesterDetails(){
+        requesterDetailsCollectionView.register(RequesterCollectionCell.self, forCellWithReuseIdentifier: "RequesterDetailsCell")
         mainView.addSubview(requesterDescriptionLabel)
         mainView.addSubview(requesterDetailsCollectionView)
         
         NSLayoutConstraint.activate([
-            requesterDescriptionLabel.topAnchor.constraint(equalTo: requestDetailsTableView.bottomAnchor, constant: 10),
+            requesterDescriptionLabel.topAnchor.constraint(equalTo: requestDetailsTableView.bottomAnchor, constant: 5),
             requesterDescriptionLabel.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 15),
             ])
-        
+
         NSLayoutConstraint.activate([
            requesterDetailsCollectionView.topAnchor.constraint(equalTo: requesterDescriptionLabel.bottomAnchor, constant: 5),
            requesterDetailsCollectionView.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
            requesterDetailsCollectionView.widthAnchor.constraint(equalTo: view.widthAnchor , constant: -15),
-           requesterDetailsCollectionView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.50)
+           requesterDetailsCollectionView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.40)
             ])
     }
+}
+
+//MARK: Network Funcationality =====================
+extension ApprovalViewController {
+    
+    func getTicketReplies(){
+        
+    }
+    
 }

@@ -11,11 +11,41 @@ import UIKit
 class ApprovalViewController: UIViewController {
 
     var approval : Approval?
+    
+    var replies:[Reply]?
+    
     lazy var requestLabels = [" Category" ," Subcategory"," Item"," Technician"," Due date"]
         
     lazy var requestValues = [approval?.ticket.category?.name, approval?.ticket.subcategory?.name ?? "Not Assigned",
                               approval?.ticket.item?.name ?? "Not Assigned" ,approval?.ticket.technician?.name,
                               dateFromString(stringDate: (approval?.ticket.due_date ?? nil))]
+    lazy var requesterLabels = [" Name" ," Employee ID"," Email"," Company"," Position"]
+    
+    lazy var requesterValues = [approval?.ticket.requester?.name,
+                                approval?.ticket.requester?.employee_id,
+                                approval?.ticket.requester?.email,
+                                approval?.ticket.requester?.business_unit?.name,
+                                approval?.ticket.requester?.job
+                                ]
+    
+    //MARK: Loading ================================
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+        
+        print(approval?.ticket.replies)
+
+        setupScrollableView()
+        setupViews()
+        setupRequestDetails()
+        setupRequesterDetails()
+        
+        getTicketReplies()
+    }
+    
+    
+   
+    
     
     let scrollableMainView: UIScrollView = {
         let v = UIScrollView()
@@ -57,7 +87,7 @@ class ApprovalViewController: UIViewController {
         v.numberOfLines = 0
         return v
     }()
-
+    
     
     lazy var ticketDescription : UILabel = {
         let v = UILabel()
@@ -89,47 +119,21 @@ class ApprovalViewController: UIViewController {
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
     }()
-   
-    var requesterDetailsTableView : UITableView = {
-        let v = UITableView()
+    
+    
+    lazy var requesterDetailsCollectionView:UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        //        layout.estimatedItemSize = CGSize(width: view.frame.width , height: 100)
+        
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        let v = UICollectionView(frame: .zero, collectionViewLayout: layout)
         v.translatesAutoresizingMaskIntoConstraints = false
+        v.delegate = self
+        v.dataSource = self
+        v.backgroundColor  = .clear
         return v
     }()
     
-   
-    var requesterDetailsCollectionView:UICollectionView = {
-        let v = UICollectionView()
-        v.translatesAutoresizingMaskIntoConstraints = false
-        return v
-    }()
-    
-    //MARK: Loading ================================
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-        requestDetailsTableView.register(ApprovalCustomCell.self, forCellReuseIdentifier: "RequestDetailsCell")
-        
-        requesterDetailsTableView.register(RequesterCollectionCell.self, forCellReuseIdentifier: "RequesterDetailsCell")
-        
-        requestDetailsTableView.delegate = self
-        requestDetailsTableView.dataSource = self
-        requestDetailsTableView.separatorStyle = .none
-        
-        
-        
-        requesterDetailsCollectionView.dataSource = self
-        requesterDetailsCollectionView.delegate = self
-        
-        
-        
-        setupScrollableView()
-        setupViews()
-        setupRequestDetails()
-        setupRequesterDetails()
-//        print(approval?.created_at)
-    }
-    
-    
-   
 }
 

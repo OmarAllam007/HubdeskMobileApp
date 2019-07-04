@@ -97,8 +97,20 @@ struct TicketLog:Codable {
 struct Attachment: Codable {
     
 }
+
 struct Reply : Codable{
-    
+    let id:Int?
+    let user_id:Int?
+    let ticket_id:Int?
+    let content:String?
+    let status_id:Int?
+    let is_resolution:Int?
+    let deleted_at:String?
+    let created_at:String?
+    let updated_at:String?
+    let sdp_id:Int?
+    let cc:[String]?
+    let to:[String]?
 }
 
 struct Status : Codable{
