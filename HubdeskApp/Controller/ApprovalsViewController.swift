@@ -137,12 +137,11 @@ extension ApprovalsViewController : UITableViewDataSource , UITableViewDelegate 
         let approval = filteredApprovals[indexPath.row]
         
         cell.approval = approval
-        cell.approvalID.text = "#\(approval.id)"
+        cell.approvalID.text = "#\(approval.ticket.id)"
         cell.approvalSubject.text = approval.ticket.subject
         cell.approvalTechnician.text = approval.ticket.technician!.name
-        cell.approvalCreatedAt.text = approval.created_at
+        cell.approvalCreatedAt.text = approval.ticket.created_at
         cell.approvalStatus.text = Approval.statuses[approval.status]
-//        cell.approvalDueAt.text = ticket.due_date ?? "Not assigned"
         return cell
     }
     

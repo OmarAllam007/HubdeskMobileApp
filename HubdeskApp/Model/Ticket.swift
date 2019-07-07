@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Ticket : Codable{
     let id:Int
@@ -111,9 +112,22 @@ struct Reply : Codable{
     let sdp_id:Int?
     let cc:[String]?
     let to:[String]?
+    let user:User
+    let status:Status
+    
+    
+    func getStatusColor() -> UIColor{
+        if [1,2,3].contains(status_id){
+            return UIColor.lightGray
+        }
+        else if [4,5].contains(status_id) {
+            return UIColor.yellow
+        }
+        return UIColor.green
+    }
 }
 
-struct Status : Codable{
+struct Status : Codable {
     let id:Int?
     let name:String?
     let description:String?

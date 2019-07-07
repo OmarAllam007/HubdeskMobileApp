@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Approval:Codable {
     static let statuses = [1:"Approved",0:"Pending Approval",-1:"Denied",-2:"Escalated"]
@@ -25,6 +26,25 @@ class Approval:Codable {
     let ticket:Ticket
     let approver:User
     let created_by:User
+    
+    func getStatus() -> String {
+        return Approval.statuses[status]!
+    }
+    
+    func getStatusColor() -> UIColor{
+        
+        if status == 1 {
+            return UIColor.green
+        }
+        else if status == 0 {
+            return UIColor.yellow
+        }
+        else if status == -1 {
+            return UIColor.red
+        }
+        
+        return UIColor.clear
+    }
 }
 
 enum ApprovalStatus{

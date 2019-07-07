@@ -8,17 +8,26 @@
 
 import UIKit
 
+
+struct ApprovalReplyStruct {
+    var replies:[ReplyStruct]
+    var approvals: [ApprovalStruct]
+}
 class ApprovalViewController: UIViewController {
 
     var approval : Approval?
     
-    var replies:[Reply]?
+    var repliesAndApprovalsData : [Any] = []
+    var repliesViewData: [ReplyStruct] = []
+    var approvalsViewData:[ApprovalStruct] = []
+    
+    
     
     lazy var requestLabels = [" Category" ," Subcategory"," Item"," Technician"," Due date"]
-        
     lazy var requestValues = [approval?.ticket.category?.name, approval?.ticket.subcategory?.name ?? "Not Assigned",
                               approval?.ticket.item?.name ?? "Not Assigned" ,approval?.ticket.technician?.name,
                               dateFromString(stringDate: (approval?.ticket.due_date ?? nil))]
+    
     lazy var requesterLabels = [" Name" ," Employee ID"," Email"," Company"," Position"]
     
     lazy var requesterValues = [approval?.ticket.requester?.name,
@@ -29,18 +38,22 @@ class ApprovalViewController: UIViewController {
                                 ]
     
     //MARK: Loading ================================
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         
-        print(approval?.ticket.replies)
+        view.backgroundColor = .white
+        repliesViewData = [ReplyStruct(opened: true, sectionData: approval?.ticket.replies)]
+        
+        approvalsViewData = [ApprovalStruct(opened: true, sectionData: approval?.ticket.approvals)]
 
+        repliesAndApprovalsData = [repliesViewData,approvalsViewData]
+        
         setupScrollableView()
         setupViews()
         setupRequestDetails()
         setupRequesterDetails()
         
-        getTicketReplies()
     }
     
     
@@ -123,8 +136,6 @@ class ApprovalViewController: UIViewController {
     
     lazy var requesterDetailsCollectionView:UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        //        layout.estimatedItemSize = CGSize(width: view.frame.width , height: 100)
-        
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         let v = UICollectionView(frame: .zero, collectionViewLayout: layout)

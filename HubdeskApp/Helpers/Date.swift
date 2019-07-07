@@ -26,3 +26,13 @@ func dateFromString(stringDate:String?) -> String {
     return "Not Assigned"
     
 }
+
+func removeHTMLTags(string:String) -> String {
+    
+    if string.count > 0 {
+            return string.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+    }
+
+    return ""
+    
+}

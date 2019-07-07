@@ -18,6 +18,10 @@
 		077C8C6422B0420400B04F0B /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077C8C6322B0420400B04F0B /* TicketsViewController.swift */; };
 		077C8C6622B0422100B04F0B /* ApprovalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077C8C6522B0422100B04F0B /* ApprovalsViewController.swift */; };
 		077C8C6822B0455400B04F0B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077C8C6722B0455400B04F0B /* Colors.swift */; };
+		0782E20022CFB5FF00EE1D42 /* ReplyStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0782E1FF22CFB5FF00EE1D42 /* ReplyStruct.swift */; };
+		0782E20222CFB76E00EE1D42 /* ApprovalReplyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0782E20122CFB76E00EE1D42 /* ApprovalReplyTableViewCell.swift */; };
+		0782E20522CFEA3100EE1D42 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0782E20422CFEA3100EE1D42 /* CustomLabel.swift */; };
+		0782E20722CFF08400EE1D42 /* ApprovalStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0782E20622CFF08400EE1D42 /* ApprovalStruct.swift */; };
 		07C8F44822AEFCE400D69671 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C8F44722AEFCE400D69671 /* AppDelegate.swift */; };
 		07C8F45022AEFCE400D69671 /* HubdeskApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 07C8F44E22AEFCE400D69671 /* HubdeskApp.xcdatamodeld */; };
 		07C8F45222AEFCE600D69671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C8F45122AEFCE600D69671 /* Assets.xcassets */; };
@@ -45,6 +49,10 @@
 		077C8C6322B0420400B04F0B /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
 		077C8C6522B0422100B04F0B /* ApprovalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovalsViewController.swift; sourceTree = "<group>"; };
 		077C8C6722B0455400B04F0B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		0782E1FF22CFB5FF00EE1D42 /* ReplyStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyStruct.swift; sourceTree = "<group>"; };
+		0782E20122CFB76E00EE1D42 /* ApprovalReplyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovalReplyTableViewCell.swift; sourceTree = "<group>"; };
+		0782E20422CFEA3100EE1D42 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		0782E20622CFF08400EE1D42 /* ApprovalStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovalStruct.swift; sourceTree = "<group>"; };
 		07C8F44422AEFCE400D69671 /* HubdeskApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HubdeskApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C8F44722AEFCE400D69671 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07C8F44F22AEFCE400D69671 /* HubdeskApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HubdeskApp.xcdatamodel; sourceTree = "<group>"; };
@@ -76,6 +84,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0782E1FE22CFB5EC00EE1D42 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				0782E1FF22CFB5FF00EE1D42 /* ReplyStruct.swift */,
+				0782E20622CFF08400EE1D42 /* ApprovalStruct.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		0782E20322CFEA1300EE1D42 /* IBDesignables */ = {
+			isa = PBXGroup;
+			children = (
+				0782E20422CFEA3100EE1D42 /* CustomLabel.swift */,
+			);
+			path = IBDesignables;
+			sourceTree = "<group>";
+		};
 		07C8F43B22AEFCE400D69671 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +122,8 @@
 		07C8F44622AEFCE400D69671 /* HubdeskApp */ = {
 			isa = PBXGroup;
 			children = (
+				0782E20322CFEA1300EE1D42 /* IBDesignables */,
+				0782E1FE22CFB5EC00EE1D42 /* Structs */,
 				07D0CC4D22C75304003CD057 /* Extensions */,
 				07C8F46022AF025800D69671 /* Helpers */,
 				07C8F45F22AF025300D69671 /* Cell */,
@@ -148,6 +175,7 @@
 				07245F9322C2943B00B2524D /* TicketTableViewCell.swift */,
 				076D985F22C3FAC3002CC0F3 /* ApprovalTableViewCell.swift */,
 				07EEEE4622CD2A8F00264DB2 /* ApprovalCustomCell.swift */,
+				0782E20122CFB76E00EE1D42 /* ApprovalReplyTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -310,11 +338,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				07EEEE4722CD2A8F00264DB2 /* ApprovalCustomCell.swift in Sources */,
+				0782E20022CFB5FF00EE1D42 /* ReplyStruct.swift in Sources */,
 				07C8F46222AF027600D69671 /* LoginViewController.swift in Sources */,
 				077C8C6422B0420400B04F0B /* TicketsViewController.swift in Sources */,
 				07245F8E22C27C0600B2524D /* URL.swift in Sources */,
 				07245F9422C2943B00B2524D /* TicketTableViewCell.swift in Sources */,
+				0782E20722CFF08400EE1D42 /* ApprovalStruct.swift in Sources */,
 				95F0334D22C48AC500038D8B /* Approval.swift in Sources */,
+				0782E20522CFEA3100EE1D42 /* CustomLabel.swift in Sources */,
 				07EEEE4522CD29D900264DB2 /* ApprovalViewController+extension.swift in Sources */,
 				07C8F45022AEFCE400D69671 /* HubdeskApp.xcdatamodeld in Sources */,
 				077C8C6822B0455400B04F0B /* Colors.swift in Sources */,
@@ -329,6 +360,7 @@
 				076D986022C3FAC3002CC0F3 /* ApprovalTableViewCell.swift in Sources */,
 				07245F9022C27C2100B2524D /* Alert.swift in Sources */,
 				077C8C6222B041C200B04F0B /* HomeViewController.swift in Sources */,
+				0782E20222CFB76E00EE1D42 /* ApprovalReplyTableViewCell.swift in Sources */,
 				07245F9222C2871400B2524D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
